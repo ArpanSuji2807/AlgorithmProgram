@@ -6,28 +6,29 @@ using System.Threading.Tasks;
 
 namespace AlgorithmProgram
 {
-    public class InsertionSort
+    public class BubbleSort
     {
         public void Sort(string[] array)
         {
             for (int i = 0; i < array.Length; i++)
             {
-                var current_Value = array[i];
-                var j = i - 1;
-                while (j >= 0 && array[j].CompareTo(current_Value) > 0)
+                for (int j = 1; j < array.Length; j++)
                 {
-                    array[j + 1] = array[j];
-                    j--;
+                    if (array[j - 1].CompareTo(array[j]) > 0)
+                    {
+                        var temp = array[j];
+                        array[j] = array[j - 1];
+                        array[j - 1] = temp;
+                    }
                 }
-                array[j + 1] = current_Value;
             }
         }
         public void Display(string[] array)
         {
-            Sort(array);
-            foreach (var elements in array)
+            Console.Write("Sorted to: ");
+            foreach (var data in array)
             {
-                Console.Write(elements+" ");
+                Console.Write(data + " ");
             }
             Console.WriteLine();
         }

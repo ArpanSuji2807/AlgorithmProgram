@@ -10,7 +10,7 @@ class program
         BinarySearch binary = new BinarySearch();
         const string path1 = @"D:\PracticeProblem\AlgorithmProgram\AlgorithmProgram\AlgorithmProgram\IntegerFile.txt";
         InsertionSort sort = new InsertionSort();
-        Console.WriteLine("1.Binary Search\n2.Insertion Sort");
+        Console.WriteLine("1.Binary Search\n2.Insertion Sort\n3.Bubble Sort");
         while (check)
         {
             Console.WriteLine("Take an option to execute");
@@ -30,6 +30,17 @@ class program
                     sort.Sort(array);
                     sort.Display(array);
                     break;
+                case 3:
+                    string integer1 = File.ReadAllText(path1);
+                    string[] arr = integer1.Split(',');
+                    BubbleSort bubbleSort = new BubbleSort();
+                    bubbleSort.Sort(arr);
+                    bubbleSort.Display(arr);
+                    break;
+                case 4:
+                    Console.WriteLine("Enter a valid choice");
+                    break;
+                    default:break;
             }
         }
     }
