@@ -10,7 +10,7 @@ class program
         BinarySearch binary = new BinarySearch();
         const string path1 = @"D:\PracticeProblem\AlgorithmProgram\AlgorithmProgram\AlgorithmProgram\IntegerFile.txt";
         InsertionSort sort = new InsertionSort();
-        Console.WriteLine("1.Binary Search\n2.Insertion Sort\n3.Bubble Sort");
+        Console.WriteLine("1.Binary Search\n2.Insertion Sort\n3.Bubble Sort\n4.Anagrams");
         while (check)
         {
             Console.WriteLine("Take an option to execute");
@@ -38,6 +38,14 @@ class program
                     bubbleSort.Display(arr);
                     break;
                 case 4:
+                    Anagrams anagrams=new Anagrams();
+                    Console.WriteLine("Enter the first word: ");
+                    string first_Word = Console.ReadLine();
+                    Console.WriteLine("Enter the second word: ");
+                    string second_Word = Console.ReadLine();
+                    anagrams.AnagramOfWords(first_Word,second_Word);
+                    break;
+                case 5:
                     Console.WriteLine("Enter a valid choice");
                     break;
                     default:break;
