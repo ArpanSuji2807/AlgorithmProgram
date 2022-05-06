@@ -10,7 +10,7 @@ class program
         BinarySearch binary = new BinarySearch();
         const string path1 = @"D:\PracticeProblem\AlgorithmProgram\AlgorithmProgram\AlgorithmProgram\IntegerFile.txt";
         InsertionSort sort = new InsertionSort();
-        Console.WriteLine("1.Binary Search\n2.Insertion Sort\n3.Bubble Sort\n4.Anagrams");
+        Console.WriteLine("1.Binary Search\n2.Insertion Sort\n3.Bubble Sort\n4.Anagrams\n5.Prime Numbers in a range");
         while (check)
         {
             Console.WriteLine("Take an option to execute");
@@ -46,6 +46,10 @@ class program
                     anagrams.AnagramOfWords(first_Word,second_Word);
                     break;
                 case 5:
+                    PrimeNumbers numbers=new PrimeNumbers();
+                    numbers.PrimeNumbersInRange();
+                    break;
+                case 6:
                     Console.WriteLine("Enter a valid choice");
                     break;
                     default:break;
