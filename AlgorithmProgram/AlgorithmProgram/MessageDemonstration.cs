@@ -18,8 +18,10 @@ namespace AlgorithmProgram
             string name2 = Console.ReadLine();
             Console.WriteLine("Enter the Mobile Number: ");
             string mobile = Console.ReadLine();
+            Console.WriteLine("Enter the date: ");
+            string date = Console.ReadLine();
             message = message.Replace("<<name>>",name1).Replace("<< full name >>", name2);
-            message = message.Replace("xxxxxxxxxx", mobile).Replace("01 / 01 / 2016", "07 / 05 / 2022");
+            message = message.Replace("xxxxxxxxxx", mobile).Replace("01 / 01 / 2016", date);
             Console.WriteLine(message);
         }
     }
