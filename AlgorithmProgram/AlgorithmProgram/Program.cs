@@ -10,7 +10,7 @@ class program
         BinarySearch binary = new BinarySearch();
         const string path1 = @"D:\PracticeProblem\AlgorithmProgram\AlgorithmProgram\AlgorithmProgram\IntegerFile.txt";
         InsertionSort sort = new InsertionSort();
-        Console.WriteLine("1.Binary Search\n2.Insertion Sort\n3.Bubble Sort\n4.Anagrams\n5.Prime Numbers in a range");
+        Console.WriteLine("1.Binary Search\n2.Insertion Sort\n3.Bubble Sort\n4.Anagrams\n5.Prime Numbers in a range\n6.Message demonstration\n7.Merge Sort");
         while (check)
         {
             Console.WriteLine("Take an option to execute");
@@ -19,7 +19,7 @@ class program
             {
                 case 1:
                     string words = File.ReadAllText(path);
-                    string[] input_Array=words.Split(',');
+                    string[] input_Array = words.Split(',');
                     Console.WriteLine("Enter a word to search");
                     string word = Console.ReadLine();
                     binary.Search(input_Array, word);
@@ -38,18 +38,30 @@ class program
                     bubbleSort.Display(arr);
                     break;
                 case 4:
-                    Anagrams anagrams=new Anagrams();
+                    Anagrams anagrams = new Anagrams();
                     Console.WriteLine("Enter the first word: ");
                     string first_Word = Console.ReadLine();
                     Console.WriteLine("Enter the second word: ");
                     string second_Word = Console.ReadLine();
-                    anagrams.AnagramOfWords(first_Word,second_Word);
+                    anagrams.AnagramOfWords(first_Word, second_Word);
                     break;
                 case 5:
-                    PrimeNumbers numbers=new PrimeNumbers();
+                    PrimeNumbers numbers = new PrimeNumbers();
                     numbers.PrimeNumbersInRange();
                     break;
                 case 6:
+                    MessageDemonstration message = new MessageDemonstration();
+                    message.Message();
+                    break;
+                case 7:
+                    MergeSort merge1 = new MergeSort();
+                    int[] arr1 = {3, 5, 6, 4, 9,7};
+                    int[] firstArr = { 3, 5, 6 };
+                    int[] secondArr = { 4, 9, 7 };
+                    merge1.Merge(firstArr, secondArr);
+                    merge1.Sorting(arr1);
+                    break;
+                case 8:
                     Console.WriteLine("Enter a valid choice");
                     break;
                     default:break;
