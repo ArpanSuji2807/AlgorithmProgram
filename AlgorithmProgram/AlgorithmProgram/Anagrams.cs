@@ -18,12 +18,12 @@ namespace AlgorithmProgram
             string value2=new string(str2);
             if (value1==value2)
             {
-                Console.WriteLine(first_Word + " " + "and" + " " + second_Word + " " + "are Anagrams");
+                Console.WriteLine("Both are Anagrams");
                 return true;
             }
             else
             {
-                Console.WriteLine(first_Word + " " + "and" + " " + second_Word + " " + "are not Anagrams");
+                Console.WriteLine("Both are not Anagrams");
                 return false;
             }
         }
