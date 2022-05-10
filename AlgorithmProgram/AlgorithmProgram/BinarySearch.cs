@@ -18,16 +18,19 @@ namespace AlgorithmProgram
                 if (input_Array[mid].Equals(value))
                 {
                     Console.WriteLine("The word is at {0} position", mid);
+                    break;
                 }
                 if (value.CompareTo(input_Array[mid]) > 0)
                 {
                     max = mid - 1;
                     Console.WriteLine("The word is at {0} position", max);
+                    break;
                 }
                 else
                 {
                     min = mid + 1;
                     Console.WriteLine("The word is at {0} position", min);
+                    break;
                 }
             }
         }

@@ -10,7 +10,7 @@ class program
         BinarySearch binary = new BinarySearch();
         const string path1 = @"D:\PracticeProblem\AlgorithmProgram\AlgorithmProgram\AlgorithmProgram\IntegerFile.txt";
         InsertionSort sort = new InsertionSort();
-        Console.WriteLine("1.Binary Search\n2.Insertion Sort\n3.Bubble Sort\n4.Anagrams\n5.Prime Numbers in a range\n6.Message demonstration\n7.Merge Sort\n8.Palindrome of Prime number");
+        Console.WriteLine("1.Binary Search\n2.Insertion Sort\n3.Bubble Sort\n4.Anagrams\n5.Prime Numbers in a range\n6.Message demonstration\n7.Merge Sort\n8.Palindrome of Prime number\n9.Finding Number");
         while (check)
         {
             Console.WriteLine("Take an option to execute");
@@ -69,6 +69,12 @@ class program
                     palindrome.Palindrome();
                     break;
                 case 9:
+                    FindingNumber finding = new FindingNumber();
+                    Console.WriteLine("Enter the power number: ");
+                    int pow=Convert.ToInt32(Console.ReadLine());
+                    finding.Find_Number(pow);
+                    break;
+                case 10:
                     Console.WriteLine("Enter a valid choice");
                     break;
                     default:break;
