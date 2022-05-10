@@ -8,7 +8,6 @@ namespace AlgorithmProgram
 {
     public class PrimeNumbers
     {
-        int rem = 0, rev = 0;
         public void PrimeNumbersInRange()
         {
             Console.WriteLine("Enter the Range of Numbers");
