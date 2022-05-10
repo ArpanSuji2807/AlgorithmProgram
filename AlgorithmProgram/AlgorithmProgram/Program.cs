@@ -12,7 +12,7 @@ class program
         BinarySearch binary = new BinarySearch();
         const string path1 = @"D:\PracticeProblem\AlgorithmProgram\AlgorithmProgram\AlgorithmProgram\IntegerFile.txt";
         InsertionSort sort = new InsertionSort();
-        Console.WriteLine("1.Binary Search\n2.Insertion Sort\n3.Bubble Sort\n4.Anagrams\n5.Prime Numbers in a range\n6.Message demonstration\n7.Merge Sort\n8.Palindrome of Prime number\n9.Finding Number\n10.UnOrdered List");
+        Console.WriteLine("1.Binary Search\n2.Insertion Sort\n3.Bubble Sort\n4.Anagrams\n5.Prime Numbers in a range\n6.Message demonstration\n7.Merge Sort\n8.Palindrome of Prime number\n9.Finding Number\n10.UnOrdered List\n11. Ordered List");
         while (check)
         {
             Console.WriteLine("Take an option to execute");
@@ -81,6 +81,18 @@ class program
                     list.MainList();
                     break;
                 case 11:
+                    OrderedList<int> orderedList = new OrderedList<int>();
+                    orderedList.AddNode(56);
+                    orderedList.AddNode(70);
+                    orderedList.AddNode(30);
+                    orderedList.AddNode(45);
+                    Console.WriteLine("The added list is: ");
+                    orderedList.DisplaySort();
+                    orderedList.SortOrderedList();
+                    Console.WriteLine("The ordered list is: ");
+                    orderedList.DisplaySort();
+                    break;
+                case 12:
                     Console.WriteLine("Enter a valid choice");
                     break;
                     default:break;
