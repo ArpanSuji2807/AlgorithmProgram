@@ -1,5 +1,7 @@
 ﻿using System;
 using AlgorithmProgram;
+using AlgorithmProgram.DataStructuresUsingGenerics;
+
 class program
 {
     public static void Main(string[] args)
@@ -10,7 +12,7 @@ class program
         BinarySearch binary = new BinarySearch();
         const string path1 = @"D:\PracticeProblem\AlgorithmProgram\AlgorithmProgram\AlgorithmProgram\IntegerFile.txt";
         InsertionSort sort = new InsertionSort();
-        Console.WriteLine("1.Binary Search\n2.Insertion Sort\n3.Bubble Sort\n4.Anagrams\n5.Prime Numbers in a range\n6.Message demonstration\n7.Merge Sort\n8.Palindrome of Prime number\n9.Finding Number");
+        Console.WriteLine("1.Binary Search\n2.Insertion Sort\n3.Bubble Sort\n4.Anagrams\n5.Prime Numbers in a range\n6.Message demonstration\n7.Merge Sort\n8.Palindrome of Prime number\n9.Finding Number\n10.UnOrdered List");
         while (check)
         {
             Console.WriteLine("Take an option to execute");
@@ -75,6 +77,10 @@ class program
                     finding.Find_Number(pow);
                     break;
                 case 10:
+                    ListMain<int> list = new ListMain<int>();
+                    list.MainList();
+                    break;
+                case 11:
                     Console.WriteLine("Enter a valid choice");
                     break;
                     default:break;
