@@ -21,7 +21,7 @@ namespace AlgorithmProgram
                     Console.WriteLine("The number is: "+mid_value);
                     break;
                 }
-                if (mid_value<0)
+                if (num > mid_value)
                 {
                     max = mid_value - 1;
                     Console.WriteLine("The number is: "+max);
